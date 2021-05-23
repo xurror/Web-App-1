@@ -195,6 +195,7 @@ def explainabiltiy(Strategy):
 def getMLScore(loan_id, dataset="German"):
 	config = configparser.ConfigParser()
 	config.read('config.ini')
+ 
 	if(config['dataset']['name'] == "German"):
 		req = requests.get(config['dataset']['location'], params=None)
 		dec = req.content.decode('utf-8')
